@@ -145,9 +145,9 @@
 
 function alarmClock(){
 let currentTime = prompt("What is the current time? 0000 format: ")
-console.log("The current time is " + currentTime)
+alert("The current time is " + currentTime)
 let alarmTime = prompt("Please set the alarm time in 0000 format: ")
-console.log("The alarm is set for " + alarmTime)
+alert("The alarm is set for " + alarmTime)
     if(currentTime === alarmTime){
         alert("ALARM! Time to get up!")
     }
