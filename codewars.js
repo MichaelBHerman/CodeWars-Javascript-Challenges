@@ -133,8 +133,24 @@
 // s="aaaxbbbbyyhwawiwjjjwwm"
 // printer_error(s) => "8/22"
 
-const error_printer = word => {
-    const regex = /[a-m]/g
-    const proper_num_of_matches = ((word || '').match(regex) || []).length
-    return `${word.length - proper_num_of_matches}/${word.length}`
-}
+// const error_printer = word => {
+//     const regex = /[a-m]/g
+//     const proper_num_of_matches = ((word || '').match(regex) || []).length
+//     return `${word.length - proper_num_of_matches}/${word.length}`
+// }
+
+
+// Exercise 7
+// Create a simple alarm clock function that takes in the current time plus the alarm time and alerts the user if the alarm time is reached:
+
+function alarmClock(){
+let currentTime = prompt("What is the current time? 0000 format: ")
+console.log("The current time is " + currentTime)
+let alarmTime = prompt("Please set the alarm time in 0000 format: ")
+console.log("The alarm is set for " + alarmTime)
+    if(currentTime === alarmTime){
+        alert("ALARM! Time to get up!")
+    }
+}    
+
+alarmClock();    
