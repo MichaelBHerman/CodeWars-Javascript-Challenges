@@ -143,14 +143,87 @@
 // Exercise 7
 // Create a simple alarm clock function that takes in the current time plus the alarm time and alerts the user if the alarm time is reached:
 
-function alarmClock(){
-let currentTime = prompt("What is the current time? 0000 format: ")
-alert("The current time is " + currentTime)
-let alarmTime = prompt("Please set the alarm time in 0000 format: ")
-alert("The alarm is set for " + alarmTime)
-    if(currentTime === alarmTime){
-        alert("ALARM! Time to get up!")
-    }
-}    
+// function alarmClock(){
+// let currentTime = prompt("What is the current time? 0000 format: ")
+// alert("The current time is " + currentTime)
+// let alarmTime = prompt("Please set the alarm time in 0000 format: ")
+// alert("The alarm is set for " + alarmTime)
+//     if(currentTime === alarmTime){
+//         alert("ALARM! Time to get up!")
+//     }
+// }    
 
-alarmClock();    
+// alarmClock();    
+
+// function palindromeCheck(number){
+//     let newNum = number.toString();
+//     let reversedNum = '';
+//     for (i = newNum.length; i >= 0; i--){
+//         reversedNum += newNum.charAt(i)
+//     }
+//     if( reversedNum === newNum){
+//         return true;
+//     }
+//         else{
+//             return false;
+//         }
+//     }
+
+// let result = palindromeCheck(70071)
+// console.log(result);
+
+// given an array of integers, return indices of two numbers such that they add up to the target
+// Loop through all numbers of the array
+// loop through the numbers again but I + 1 (j)
+// add I + J
+// compare to target
+// return indices of two numbers
+
+
+// function twoSum(array, target){
+//     for (i = 0; i <array.length; i++){
+//         for (j = i + 1; j < array.length; j++){
+//             if (array[i] + array[j] === target){
+//               return [i, j];
+//             }
+//         }
+//     }
+// }
+// let result = twoSum([7, 1, 11, 5], 8)
+// console.log (result);
+
+// Write a function to find the longest common prefix string amongst an array of strings.
+
+// If there is no common prefix, return an empty string "".
+
+ 
+
+// Example 1:
+
+// Input: strs = ["flower","flow","flight"]
+// Output: "fl"
+// Example 2:
+
+//loop through the array of strings
+
+var longestCommonPrefix = function (strs) {
+    // Return early on empty input
+    if (!strs.length) return '';
+
+    // Loop through the letters of the first string
+    for (let i = 0; i <= strs[0].length; i++) {
+        // Loop through the other strings
+        for (let j = 1; j < strs.length; j++) {
+            // Check if this character is also present in the same position of each string
+            if (strs[0][i] !== strs[j][i]) {
+                // If not, return the string up to and including the previous character
+                return strs[0].slice(0, i);
+            }
+        }
+    }
+
+    return strs[0];
+};
+
+let result = longestCommonPrefix(["flower", "flow", "float"])
+console.log(result);
